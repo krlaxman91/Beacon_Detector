@@ -65,10 +65,11 @@ extension ViewController: UITableViewDataSource {
         case CLProximity.Unknown:
             proximityLabel = "Unknown"
         }
+        
         cell.beaconProximatyLabel.text = proximityLabel
         cell.beaconMajorLabel.text =  "\(beacon.major.integerValue)"
         cell.beaconMinorLabel.text = "\(beacon.minor.integerValue)"
-        cell.beaconUUIDLabel.text = beacon.proximityUUID.UUIDString
+        cell.beaconUUIDLabel.text = "Accuracy:" + "\(beacon.accuracy)"
         return cell
     }
 }
